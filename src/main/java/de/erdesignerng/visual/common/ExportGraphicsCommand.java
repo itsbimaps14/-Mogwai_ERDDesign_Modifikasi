@@ -85,7 +85,7 @@ public class ExportGraphicsCommand extends UICommand {
             if (theChooser.showSaveDialog(getDetailComponent()) == JFileChooser.APPROVE_OPTION) {
 
                 File theFile = theFilter.getCompletedFile(theChooser.getSelectedFile());
-                showMessageDialog(null, theChooser.getSelectedFile());
+                //showMessageDialog(null, theChooser.getSelectedFile());
                 try {
                     exporter.fullExportToStream(editor.getGraph(), new FileOutputStream(theFile));
                     exportToFile();
@@ -98,13 +98,13 @@ public class ExportGraphicsCommand extends UICommand {
     }
     
     public void exportToFile(){
-        showMessageDialog(null, "Sedang export");
+        //showMessageDialog(null, "Sedang export");
         GenericFileFilter theFilter = new GenericFileFilter(exporter.getFileExtension(), exporter
                     .getFileExtension()
                     + " File");
         File tmp = new File(System.getProperty("user.dir") + "/export.png");
         File theFile = theFilter.getCompletedFile(tmp);
-        showMessageDialog(null, theFile);
+        //showMessageDialog(null, theFile);
         try {
             exporter.fullExportToStream(editor.getGraph(), new FileOutputStream(theFile));
         }

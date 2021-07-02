@@ -32,9 +32,9 @@ public class SendMailTest extends UICommand{
 
     @Override
     public void execute(){
-            showMessageDialog(null, "Awal export");
+            //showMessageDialog(null, "Awal export");
             editor.getImageExport(new ImageExporter("png"));
-            showMessageDialog(null, "Akhir export");
+            //showMessageDialog(null, "Akhir export");
 
             //showMessageDialog(null, "Execute Terpanggil");
             GetReciever mailFrame = new GetReciever();
